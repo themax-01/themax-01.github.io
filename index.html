@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A Growing Message</title>
+    <style>
+        /* Previous CSS styles remain the same */
+        .message-container {
+            text-align: center;
+            margin: 20px;
+        }
+        .daily-message {
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="heart"></div>
+    <div class="message fade-in">
+        <!-- Previous message content -->
+        <div class="message-container">
+            <h3>Today's Special Message:</h3>
+            <div id="dailyMessage" class="daily-message"></div>
+        </div>
+    </div>
+
+    <script>
+        // Previous JavaScript remains
+        
+        // Add this new code for daily messages
+        const messages = [
+            "Every day, my feelings for you grow stronger.",
+            "Your smile brightens my world.",
+            "You inspire me to be a better person.",
+            "Thinking of you makes my day better.",
+            "Your happiness means the world to me.",
+            "Distance doesn't change how I feel.",
+            "You're amazing just as you are.",
+            // Add more messages here
+        ];
+
+        function updateDailyMessage() {
+            const today = new Date();
+            const messageIndex = today.getDate() % messages.length;
+            document.getElementById('dailyMessage').textContent = messages[messageIndex];
+        }
+
+        // Update message daily
+        updateDailyMessage();
+    </script>
+</body>
+</html>
